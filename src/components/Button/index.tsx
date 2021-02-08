@@ -7,11 +7,12 @@ interface ButtonProps {
     col: number;
     state: CellState;
     value: CellValue;
+    red?: boolean
     onClick(rowParam: number, colParam: number): (...args: any[]) => void;
     onContextMenu(rowParam: number, colParam: number): (...args: any[]) => void;
 }
 
-const Button: React.FC<ButtonProps> = ({row, col, onClick, onContextMenu, state, value}) => {
+const Button: React.FC<ButtonProps> = ({row, col, onClick, onContextMenu, state, value, red}) => {
     const renderContent = (): React.ReactNode => {
         if(state == CellState.dug) {
             if(value == CellValue.mine) {
@@ -26,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({row, col, onClick, onContextMenu, state,
     }
 
     return <div className={`Button ${state == CellState.dug ? 'dug' : ''
-    } value-${value}`} 
+    } value-${value} ${red ? 'red' : ''}`} 
     onClick={onClick(row, col)}
     onContextMenu={onContextMenu(row, col)}
     >

@@ -142,7 +142,7 @@ export const openMultipleCells = (
         topLeftCell.value != CellValue.mine
     ) {
         if(topLeftCell.value == CellValue.none){
-            newCells = openMultipleCells(newCells, rowParam - 1, colParam - 1); 
+            newCells = openMultipleCells(newCells, rowParam - 1, colParam - 1);
         } else {
             newCells[rowParam - 1][colParam - 1].state = CellState.dug;
         }

@@ -15,6 +15,10 @@
         border-width: 1px;
     }
 
+    &.red {
+        background-color: red;
+    }
+
     span {
         display:flex; 
         justify-content: center;
