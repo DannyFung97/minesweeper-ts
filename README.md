@@ -1,6 +1,6 @@
 # React Minesweeper
 
-### A minesweeper clone created on React using Typescript and SASS.
+### A minesweeper clone created on React using Typescript and SASS. [Live Version](https://condescending-mayer-d3975f.netlify.app/)
 
 ![](./screenshots/minesweeper-neutral.png)
 
